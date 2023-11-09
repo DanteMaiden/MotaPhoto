@@ -184,6 +184,8 @@ Text Domain: motaphoto
     font-style: normal;
 }
 
+/* fin font Poppins */
+
 
 body {
     margin: 0 !important;
@@ -266,6 +268,10 @@ footer {
         flex-direction: column;
     }
 
+    footer{
+        text-align: center;
+    }
+
     #logo {
         height: 9px;
     }
@@ -275,7 +281,7 @@ footer {
     }
 
     
-    #menu-header-1{
+    #menu-header-1 {
         list-style-type: none;
         text-align: center;
         padding-left: 0 !important;
@@ -283,12 +289,12 @@ footer {
         padding-bottom: 100px;
     }
 
-    #menu-header-1 li{
+    #menu-header-1 li {
         padding-top: 20px !important;
         padding-bottom: 20px !important;
     }
 
-    #menu-header-1 a{
+    #menu-header-1 a {
         text-decoration: none;
         font-family: "SpaceMono";
         font-size: 44px;
@@ -297,7 +303,107 @@ footer {
         text-transform: uppercase;
     }
 
-    .megamenu-mobile{
+    .megamenu-mobile {
         display: block;
     }
+
+    /* responsive modale */
+
+    .modale {
+        width: 60% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+/*css de la modale*/
+.box-modale {
+    display: flex;
+    justify-content: center;
+}
+
+.modale {
+    position: fixed;
+    width: 297px;
+    height: 90vh;
+    background-color: white;
+    top: 30px;
+    border: 5px solid black;
+    padding-left: 150px;
+    padding-right: 150px;
+    background-image: url(./assets/images/modale-header.png);
+    background-repeat: no-repeat;
+    padding-top: 130px;
+    padding-bottom: 30px;
+    overflow: auto;
+}
+
+.nf-field-label, .nf-form-content label { 
+    text-transform: uppercase;
+    font-family: 'Poppins' !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+}
+
+.nf-form-content .list-select-wrap .nf-field-element>div, .nf-form-content input:not([type=button]), .nf-form-content textarea {
+    border-radius: 8px !important;
+    background-color: white !important;
+    height: 35px !important;
+}
+
+.nf-form-fields-required {
+    display: none;
+}
+
+.nf-form-content button, .nf-form-content input[type=button], .nf-form-content input[type=submit] {
+    background-color:#D8D8D8 !important;
+    height: 40px !important;
+    font-family: 'SpaceMono' !important;
+    color: black !important;
+    width: 100% !important;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+
+.nf-form-content button:hover, .nf-form-content input[type=button]:hover, .nf-form-content input[type=submit]:hover {
+    background-color:#D8D8D8 !important;
+    color: black !important;
+    border-radius: 2px !important;
+}
+
+.nf-form-content textarea.ninja-forms-field {
+    height: 90px !important;
+}
+
+.nf-error.field-wrap .nf-field-element:after {
+    height: 33px !important;
+    line-height: 35px !important;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+}
+
+.nf-pass.field-wrap .nf-field-element:after {
+    line-height: 37px !important;
+}
+
+.nf-error .nf-error-msg, .nf-error-msg, .ninja-forms-req-symbol {
+    display: none !important;
+}
+
+.ninja_forms_required_items, .nf-field-container {
+    margin-bottom: 18px !important;
+}
+
+.contact-overlay{
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+#menu-item-11{
+    cursor: pointer;
 }

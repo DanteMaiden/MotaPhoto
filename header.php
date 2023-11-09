@@ -9,7 +9,9 @@
 <body>
 
 <header>
-    <img src="./wp-content/themes/motaphoto/assets/images/Logo.png" alt='logo' id='logo' />
+    
+    <a href="<?php echo home_url(); ?>"><img src="./wp-content/themes/motaphoto/assets/images/Logo.png" alt='logo MotaPhoto' id='logo'/></a>
+
     <div class="menu-desktop">
         <?php
             wp_nav_menu(array(
