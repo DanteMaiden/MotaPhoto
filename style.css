@@ -231,6 +231,10 @@ footer {
     justify-content: center;
 }
 
+#menu-footer a:hover, #menu-header a:hover{
+    font-weight: 700;
+}
+
 #menu-footer li {
     margin-left: 20px;
     margin-right: 20px;
