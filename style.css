@@ -639,3 +639,39 @@ body{
         display: none;
     }
   }
+
+  /* Home Page */
+
+.random-photo-block {
+    margin: 20px 0; 
+}
+
+.random-photo-block img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    position: absolute;
+}
+
+.hero-title{
+    position: relative;
+    z-index: 99;
+    top: 23vh;
+    left: 10vw;
+    width: 80%;
+}
+
+.hero-title img{
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 780px) {
+    .random-photo-block img {
+        height: 30vh;
+    }
+    
+    .hero-title{
+        top: 10vh;
+    }
+}
