@@ -254,6 +254,12 @@ footer {
 
 /*responsive*/
 @media (max-width: 780px) {
+
+    #menu-footer li {
+        margin-left: -20px;
+        margin-right: 20px;
+    }
+
     .menu-mobile{
         display: block;
         height: 18px;
