@@ -316,7 +316,7 @@ footer {
     }
 }
 
-/*css de la modale*/
+/* css de la modale */
 .box-modale {
     display: flex;
     justify-content: center;
@@ -361,13 +361,12 @@ footer {
     font-family: 'SpaceMono' !important;
     color: black !important;
     width: 100% !important;
-    font-weight: bold !important;
     cursor: pointer;
 }
 
 .nf-form-content button:hover, .nf-form-content input[type=button]:hover, .nf-form-content input[type=submit]:hover {
-    background-color:#D8D8D8 !important;
-    color: black !important;
+    background-color:#000000 !important;
+    color: white !important;
     border-radius: 2px !important;
 }
 
@@ -407,3 +406,226 @@ footer {
 #menu-item-11{
     cursor: pointer;
 }
+
+
+/* template photo */
+
+.photo-article{
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: end;
+    text-transform: uppercase;
+    font-family: 'SpaceMono';
+    font-weight: 400;
+    line-height: 20.73px;
+}
+
+.entry-title{
+    text-transform: uppercase;
+    font-family: 'SpaceMono';
+    font-style: italic;
+    font-weight: 400;
+    line-height: 58px;
+    font-size: 66px;
+}
+
+.photo-infos, .photo-img{
+    flex: 1;
+}
+
+.photo-img, .photo-img .attachment-full{
+    width: 100%;
+    height: auto;
+}
+
+.custom-field, .custom-taxonomy, .entry-year{
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+.entry-year{
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+    width: 95%;
+}
+
+.photo-contact{
+    font-family: 'Poppins';
+    text-transform: initial;
+    font-size: 14px;
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.contact{
+    background: #d8d8d8;
+    border-radius: 2px;
+    box-shadow: none;
+    color: #000;
+    transition: all .5s;
+    font-family: 'SpaceMono';
+    padding: 15px 70px;
+    margin-left: 30px;
+}
+
+.contact:hover{
+    background: #000;
+    color: #fff;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.photo-mobile{
+    display: none;
+}
+
+/*photos related*/
+
+.photo-related{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 50px;
+    margin-top: 5px;
+    border-top: 1px solid #000;
+  }
+  
+  .photo-subtitle{
+    font-family: 'SpaceMono';
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .photos-deux-related{
+    display: flex;
+    width: 100%;
+  }
+  
+  .photos-deux-related .photos-deux-flex{
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .photos-deux-related img{
+    width: 100%;
+    height: auto;
+  }
+
+  .photo-btn-box{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .photo-btn-related{
+    padding: 10px 50px;
+    font-family: 'SpaceMono';
+    font-size: 12px;
+    font-weight: 400;
+    background-color: #D8D8D8;
+    color: #000000;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    transition: 0.5s;
+  }
+
+  .photo-btn-related:hover{
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .get_id{
+    display: none;
+  }
+
+  .photo-arrows, .photo-navigation{
+    text-align: right;
+  }
+  
+  .photo-right{
+    margin-left: 20px;
+    margin-right: 2px;
+  }
+
+  /* Single photo MOBILE */
+
+body{
+    overflow-x: hidden !important;
+  }
+  
+  @media (max-width: 780px) {
+    .photo-desktop{
+      display: none;
+    }
+  
+    .photo-mobile{
+      display: block;
+      width: 100%;
+    }
+  
+    .photo-mobile img{
+      width: 80% !important;
+      height: auto;
+    }
+  
+    .entry-title {
+      font-size: 46px;
+    }
+  
+    .photos-deux-related {
+      display: block;
+    }
+  
+    .photo-main {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+    .photo-related {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 20px;
+    }
+
+    .photo-subtitle{
+        text-align: center;
+    }
+
+    .photo-article{
+        margin: 0;
+    }
+
+    .entry-year{
+        width: 100%;
+    }
+  
+    .custom-field, .custom-taxonomy, .entry-year{
+      font-size: 14px;
+    }
+
+    .entry-title, .custom-field, .custom-taxonomy, .entry-year, .photo-contact, .photo-mobile{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .photo-contact{
+        display: block;
+        text-align: center;
+    }
+
+    .photo-contact p{
+        margin-bottom: 30px;
+    }
+
+    .contact{
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .photo-img{
+        display: none;
+    }
+  }

@@ -1,7 +1,7 @@
 //script du menu mobile//
-var menuBtn = document.getElementById("menuBtn");
-var menuCroix = document.getElementById("menuCroix");
-var megamenu = document.getElementById("megamenu");
+const menuBtn = document.getElementById("menuBtn");
+const menuCroix = document.getElementById("menuCroix");
+const megamenu = document.getElementById("megamenu");
 
 menuBtn.addEventListener("click", function() {
     megamenu.classList.add("active");
@@ -22,22 +22,44 @@ menuBtn.addEventListener("click", function() {
   });
 
 //script de la modale//
-var contact = document.getElementsByClassName("menu-item-11");
-var modale = document.getElementById("modale");
-var overlay = document.getElementById("modale-overlay");
+const contacts = document.querySelectorAll(".menu-item-11");
+const modale = document.getElementById("modale");
+const overlay = document.getElementById("modale-overlay");
+const reference = document.getElementsByClassName("form_ref");
 
-contact[0].addEventListener("click", function() {
+// Bouton contact sur la page de photos
+const photo_btn_contact = document.getElementById("photo-btn-contact");
+
+contacts.forEach(contact => {
+  contact.addEventListener("click", () => {
     modale.classList.add("active");
     modale.classList.remove("inactive");
     overlay.classList.add("active");
     overlay.classList.remove("inactive");
-  });
+  })
+})
 
-  contact[1].addEventListener("click", function() {
+
+// contact[0].addEventListener("click", function() {
+//     modale.classList.add("active");
+//     modale.classList.remove("inactive");
+//     overlay.classList.add("active");
+//     overlay.classList.remove("inactive");
+//   });
+
+//   contact[1].addEventListener("click", function() {
+//     modale.classList.add("active");
+//     modale.classList.remove("inactive");
+//     overlay.classList.add("active");
+//     overlay.classList.remove("inactive");
+//   });
+
+  photo_btn_contact?.addEventListener("click", function() {
     modale.classList.add("active");
     modale.classList.remove("inactive");
     overlay.classList.add("active");
     overlay.classList.remove("inactive");
+    reference[0].value = ref;
   });
 
   overlay.addEventListener("click", function() {
