@@ -72,7 +72,7 @@
     <div class="photo-img">
         <!-- image à la une -->
         <?php if (has_post_thumbnail()) : ?>
-            <div class="post-thumbnail">
+            <div class="post-thumbnail" id="photo-lightbox">
                 <?php the_post_thumbnail('full'); ?>
             </div>
         <?php endif; ?>
@@ -127,7 +127,7 @@
                           while ($query->have_posts()) {
                             $query->the_post();
                             $urlrelated = get_the_permalink();
-                            echo("<a href='".$urlrelated."'><div class='photos-deux-flex'>");
+                            echo("<a href='".$urlrelated."'><div class='photos-deux-flex survol-photo'>");
                               $query->the_post_thumbnail();
                               the_post_thumbnail(); 
                               // Le contenu de chaque article ici.

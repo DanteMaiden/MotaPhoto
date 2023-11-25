@@ -35,3 +35,11 @@ function motaphoto_enqueue_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'motaphoto_enqueue_scripts');
+
+//enqueue le fichier lightbox.js
+function motaphoto_enqueue_lightbox() {
+    wp_enqueue_script('lightbox', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), '1.0', true);
+}
+
+add_action('wp_enqueue_scripts', 'motaphoto_enqueue_lightbox');
+    
