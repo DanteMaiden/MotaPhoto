@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+
+<!-- Hero -->
 <div class="random-photo-block">
     <?php
     // fonction pour l'image aléatoire du hero
@@ -22,65 +24,91 @@
     ?>
 </div>
 <div class="hero-title">
+    <!-- Image texte blanc "photographe event" -->
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero.png" alt="photographe event"/>
 </div>
 
-<!-- Affichage du moteur de recherche d'images -->
-<!-- Dans votre fichier de template de page d'accueil -->
-
 <!-- Sélecteurs de filtres -->
-<div>
-    <label for="format-select">Format:</label>
-    <select id="format-select">
-        <!-- Remplacez 'format_1', 'format_2', etc., par vos termes de taxonomie réels -->
-        <option value="all">Tout</option>
-        <option value="portrait">Portrait</option>
-        <option value="paysage">Paysage</option>
-        <!-- Ajoutez d'autres options selon vos besoins -->
-    </select>
+<div class="filters-box">
+    <div class="filters-left">
+        <!-- Filtre catégorie -->
+        <select id="categorie-select" class="home-filter">
+            <option value="all">Catégories</option>
+            <?php
+                // Récupérer tous les termes de la taxonomie catégorie
+                $terms = get_terms(array(
+                    'taxonomy' => 'categorie',
+                    'hide_empty' => false,
+                ));
+                // Vérifier s'il y a des termes
+                if ($terms && !is_wp_error($terms)) {
+                    foreach ($terms as $term) {
+                        echo '<option value="' . $term->slug . '">' . $term->name . '</option>';
+                    }
+                }
+            ?>
+        </select>
 
-    <label for="categorie-select">Catégorie:</label>
-    <select id="categorie-select">
-        <!-- Remplacez 'category_1', 'category_2', etc., par vos termes de taxonomie réels -->
-        <option value="all">Tout</option>
-        <option value="mariage">Mariage</option>
-        <option value="concert">Concert</option>
-        <!-- Ajoutez d'autres options selon vos besoins -->
-    </select>
+        <!-- Filtre format -->
+        <select id="format-select" class="home-filter">
+            <option value="all">Formats</option>
+            <?php
+                // Récupérer tous les termes de la taxonomie format
+                $terms = get_terms(array(
+                    'taxonomy' => 'format',
+                    'hide_empty' => false,
+                ));
+                // Vérifier s'il y a des termes
+                if ($terms && !is_wp_error($terms)) {
+                    foreach ($terms as $term) {
+                        echo '<option value="' . $term->slug . '">' . $term->name . '</option>';
+                    }
+                }
+            ?>
+        </select>
+    </div>
 
-    <label for="order-select">Ordre:</label>
-    <select id="order-select">
+    <!-- Filtre tri par date -->
+    <select id="order-select" class="home-filter">
+        <option value="ASC">Trier par</option>
         <option value="ASC">Croissant</option>
         <option value="DESC">Décroissant</option>
     </select>
 </div>
 
-<!-- Conteneur pour les miniatures -->
+<!-- Liste des images -->
 <div id="photos-container">
     <?php
+
+    //création des arguments pour la requette
     $args = array(
-        'post_type' => 'photos',
-        'posts_per_page' => 12,
-        'paged' => 1,
-        'order' => 'ASC',
+        'post_type' => 'photos', //post type photo
+        'posts_per_page' => 12, //12 photos par défaut
+        'paged' => 1, //par défaut on charge la page 1
+        'order' => 'ASC', //par défaut on charge les dates croissantes
     );
 
-    $query = new WP_Query($args);
+    $query = new WP_Query($args); //envoi de la requette avec nos arguments
 
-    if ($query->have_posts()) :
-        while ($query->have_posts()) : $query->the_post();
-            // Affichez vos miniatures ici
-            echo get_the_post_thumbnail();
+    if ($query->have_posts()) : //si la requette retourne des photos
+        while ($query->have_posts()) : $query->the_post(); //tant qu'on a des photos, on les affiche une par une
+            $urlrelated = get_the_permalink(); //on récupère l'url de la photo
+            echo '<div class="photos-container-image">';
+            echo("<a href='".$urlrelated."'>"); //on créer un lien vers le template photo
+            echo get_the_post_thumbnail(); //on affiche la thumbnail de la photo
+            echo '</a></div>';
         endwhile;
         wp_reset_postdata();
     else :
-        echo 'No photos found';
+        echo 'Pas de photos trouvées<br/>'; //si on ne trouve pas de photos, message d'erreur
     endif;
     ?>
 </div>
 
 <!-- Bouton "Charger plus" -->
-<button id="load-more-photos">Charger plus</button>
+<div class="load-more-photos-box">
+    <button id="load-more-photos">Charger plus</button>
+</div>
 
 
 

@@ -113,18 +113,22 @@ function load_more_photos() {
         );
     }
 
-    var_dump($args);
+    //var_dump($args);
 
     $query = new WP_Query($args);
 
     if ($query->have_posts()) :
         while ($query->have_posts()) : $query->the_post();
-            // Affichez vos miniatures ici
+            $urlrelated = get_the_permalink();
+            echo '<div class="photos-container-image">';
+            echo("<a href='".$urlrelated."'>");
             echo get_the_post_thumbnail();
+            echo '</a>';
+            echo '</div>';
         endwhile;
         wp_reset_postdata();
     else :
-        echo 'No more photos found';
+        echo 'Pas de photos trouvées<br/>';
     endif;
 
     die();
