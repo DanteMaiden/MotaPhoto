@@ -138,7 +138,8 @@
                       ?>
                     </div>
                     <div class="photo-btn-box">
-                      <a class="photo-btn-related">Toutes les photos</a>
+                      <a class="photo-btn-related" href="/MotaPhoto#photos-container/">Toutes les photos</a>
                     </div>
                 </div>
+
 <?php get_footer(); ?>

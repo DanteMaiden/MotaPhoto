@@ -246,14 +246,17 @@ footer {
 
 .active{
     display: block;
+    transition: opacity 2s ease-in;
 }
 
 .active-flex{
     display: flex;
+    transition: opacity 2s ease-in;
 }
 
 .inactive{
     display: none;
+    transition: opacity 2s ease-in;
 }
 
 .megamenu-mobile{
@@ -542,6 +545,8 @@ footer {
     margin-top: 40px;
     margin-bottom: 50px;
     transition: 0.5s;
+    text-decoration: none !important;
+    border-radius: 2px;
   }
 
   .photo-btn-related:hover{
@@ -549,6 +554,7 @@ footer {
     color: #ffffff;
     cursor: pointer;
     transition: 0.5s;
+    text-decoration: none !important;
   }
 
   .get_id{
@@ -840,7 +846,7 @@ body{
     margin-bottom: 50px;
     transition: 0.5s;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
   }
 
 #load-more-photos:hover{

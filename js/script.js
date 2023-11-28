@@ -39,21 +39,6 @@ contacts.forEach(contact => {
   })
 })
 
-
-// contact[0].addEventListener("click", function() {
-//     modale.classList.add("active");
-//     modale.classList.remove("inactive");
-//     overlay.classList.add("active");
-//     overlay.classList.remove("inactive");
-//   });
-
-//   contact[1].addEventListener("click", function() {
-//     modale.classList.add("active");
-//     modale.classList.remove("inactive");
-//     overlay.classList.add("active");
-//     overlay.classList.remove("inactive");
-//   });
-
   photo_btn_contact?.addEventListener("click", function() {
     modale.classList.add("active");
     modale.classList.remove("inactive");

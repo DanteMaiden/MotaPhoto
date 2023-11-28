@@ -71,8 +71,8 @@
     <!-- Filtre tri par date -->
     <select id="order-select" class="home-filter">
         <option value="ASC">Trier par</option>
-        <option value="ASC">Croissant</option>
-        <option value="DESC">Décroissant</option>
+        <option value="ASC">Date - Ordre croissant</option>
+        <option value="DESC">Date - Ordre décroissant</option>
     </select>
 </div>
 

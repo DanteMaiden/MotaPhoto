@@ -23,7 +23,6 @@ jQuery(function($) {
                 success: function(response) {
                     $('#photos-container').append(response);
                     page++;
-                    //canLoadMore = false;
                 }
             });
         }
