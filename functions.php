@@ -120,7 +120,7 @@ function load_more_photos() {
     if ($query->have_posts()) :
         while ($query->have_posts()) : $query->the_post();
             $urlrelated = get_the_permalink();
-            echo '<div class="photos-container-image">';
+            echo '<div class="photos-container-image survol-photo">';
             echo("<a href='".$urlrelated."'>");
             echo get_the_post_thumbnail();
             echo '</a>';

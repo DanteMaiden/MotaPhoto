@@ -662,7 +662,7 @@ body{
 .hero-title{
     position: absolute;
     z-index: 99;
-    top: 45vh;
+    top: 43vh;
     left: 10vw;
     width: 80%;
 }
@@ -682,7 +682,16 @@ body{
     }
     
     .hero-title{
-        top: 25vh;
+        margin-top: -140px;
+        margin-bottom: 65px;
+        text-align: center;
+        width: 100%;
+        position: static;
+    }
+
+    .hero-title img{
+        width: 80%;
+        height: auto;
     }
 }
 
@@ -831,6 +840,7 @@ body{
     margin-bottom: 50px;
     transition: 0.5s;
     border: none;
+    border-radius: 5px;
   }
 
 #load-more-photos:hover{
@@ -856,7 +866,7 @@ body{
 }
 
 .home-filter{
-    padding: 10px 20px;
+    padding: 10px 70px 10px 10px;
     border-radius: 8px;
     font-family: 'Poppins';
     font-size: 12px;
@@ -868,4 +878,42 @@ body{
     font-family: 'Poppins';
     font-size: 12px;
     font-weight: 500;
+    border: none;
+}
+
+select option:checked,
+select option:hover {
+  box-shadow: 0 0 10px 100px #E00000 inset;
+}
+
+select:focus>option:checked {
+  background: #E00000 !important;
+  color: #fff;
+}
+
+#categorie-select{
+    margin-right: 20px;
+}
+
+@media (max-width: 780px) {
+    .filters-box{
+        white-space: nowrap;
+        overflow: auto;
+    }
+
+    #format-select{
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .hero-title {
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-title {
+        margin-bottom: 100px;
+    }
 }

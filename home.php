@@ -93,7 +93,7 @@
     if ($query->have_posts()) : //si la requette retourne des photos
         while ($query->have_posts()) : $query->the_post(); //tant qu'on a des photos, on les affiche une par une
             $urlrelated = get_the_permalink(); //on récupère l'url de la photo
-            echo '<div class="photos-container-image">';
+            echo '<div class="photos-container-image survol-photo">';
             echo("<a href='".$urlrelated."'>"); //on créer un lien vers le template photo
             echo get_the_post_thumbnail(); //on affiche la thumbnail de la photo
             echo '</a></div>';
