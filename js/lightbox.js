@@ -5,6 +5,7 @@ let lightbox_cross = document.getElementById("lightbox-cross");
 let lightbox_infos = document.getElementById("lightbox-infos");
 
 
+//Ouverture de la lightbox
 photo.addEventListener("click", function() {
     lightbox.classList.add("active-flex");
     lightbox.classList.remove("inactive");
@@ -16,6 +17,7 @@ photo.addEventListener("click", function() {
     lightbox_infos.classList.remove("inactive");
 });
 
+//Fermer la lightbox
 lightbox_cross.addEventListener("click", function() {
     lightbox.classList.add("inactive");
     lightbox.classList.remove("active-flex");
@@ -28,10 +30,7 @@ lightbox_cross.addEventListener("click", function() {
 });
 
 
-
-
 //navigation lightbox
-
     let lightbox_cat = document.getElementById("lightbox-info-cat");
     let lightbox_ref = document.getElementById("lightbox-info-ref");
     let lightbox_img = document.getElementById("lightbox-info-img");

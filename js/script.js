@@ -44,7 +44,7 @@ contacts.forEach(contact => {
     modale.classList.remove("inactive");
     overlay.classList.add("active");
     overlay.classList.remove("inactive");
-    reference[0].value = ref;
+    reference[0].value = ref; //on passe la ref dans le formulaire
   });
 
   overlay.addEventListener("click", function() {
