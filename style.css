@@ -887,6 +887,8 @@ body{
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
+    border: solid 1px gray;
+    width: 210px;
 }
 
 .home-filter option{
@@ -932,3 +934,90 @@ select:focus>option:checked {
         margin-bottom: 100px;
     }
 }
+
+.s-hidden {
+    visibility: hidden;
+    padding-right: 10px;
+}
+.select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: black;
+    border-radius: 8px;
+    background-color: white;
+    padding: 12px 10px 0 10px;
+}
+.styledSelect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    padding: 0 10px;
+    font-weight: bold;
+    border-radius: 9px;
+    border: 1px solid #B8BBC2;
+    padding: 16px 10px 0 10px;
+    margin-right: 20px;
+    width: 208px;
+}
+
+.styledSelect:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-color: black transparent transparent transparent;
+    position: absolute;
+    top: 22px;
+    right: 6px;
+}
+.styledSelect:active, .styledSelect.active {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: 1px solid #215AFF;
+}
+
+.options {
+    display:none;
+    position:absolute;
+    top:100%;
+    right:0;
+    left:0;
+    z-index:999;
+    margin:0 0;
+    padding:0 0;
+    list-style:none;
+    border:1px solid #ccc;
+    background-color:white;
+    -webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 230px;
+}
+.options li {
+    padding:0 6px;
+    margin:0 0;
+    padding:0 10px;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.options li:hover {
+    background-color:#E00000;
+    color:white;
+}
+
