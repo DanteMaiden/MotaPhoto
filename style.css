@@ -871,7 +871,9 @@ body{
     }
 }
 
+
 /* Style des filtres sur la homepage */
+
 .filters-box{
     display: flex;
     justify-content: space-between;

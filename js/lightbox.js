@@ -44,7 +44,6 @@ lightbox_cross.addEventListener("click", function() {
         for(let i = 0; i< dataPhotos.length; i++){
             if(url_value == dataPhotos[i]['thumbnail']){
                 var currentImage = i;
-                //console.log(i);
             }
         }
 
@@ -65,8 +64,6 @@ lightbox_cross.addEventListener("click", function() {
             lightbox_ref.innerHTML = dataPhotos[currentImage]['reference'];
         }
 
-        //alert('gauche');
-        //console.log(dataPhotos);
     }
 
     //fonction clic droit
@@ -78,7 +75,6 @@ lightbox_cross.addEventListener("click", function() {
         for(let i = 0; i< dataPhotos.length; i++){
             if(url_value == dataPhotos[i]['thumbnail']){
                 var currentImage = i;
-                //console.log(i);
             }
         }
 
@@ -99,6 +95,4 @@ lightbox_cross.addEventListener("click", function() {
             lightbox_ref.innerHTML = dataPhotos[currentImage]['reference'];
         }
 
-        //alert('droit');
-        //console.log(dataPhotos);
     }
